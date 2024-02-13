@@ -13,7 +13,7 @@ function StdinName() {
     });
 
     process.stdin.once('end', function() {
-       process.stdout.write('This important software is now closing \n');
+       process.stdout.write('This important software is now closing\n');
     });
 }
 StdinName();
