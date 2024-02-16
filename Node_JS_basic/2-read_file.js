@@ -9,15 +9,15 @@ function countStudents(path) {
     const data = fs.readFileSync(path, 'utf8');
 
     const lines = data.split('\n').filter((line) => line.trim() !== '');
-
     const [, ...students] = lines;
-
     const fieldCounts = {};
 
     students.forEach((student) => {
       const [, , , field] = student.split(',');
+
       if (fieldCounts[field]) {
         fieldCounts[field].push(student.split(',')[0]);
+
       } else {
         fieldCounts[field] = [student.split(',')[0]];
       }
