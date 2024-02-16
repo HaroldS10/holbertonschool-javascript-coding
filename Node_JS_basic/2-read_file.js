@@ -1,3 +1,7 @@
+// you should try to read the database file synchronously.
+// If the database is not available, it should return an error message.
+// You must record the number of students in each field and list.
+
 const fs = require('fs');
 
 function countStudents(path) {
